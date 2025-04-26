@@ -1,0 +1,32 @@
+package com.escola.Escola.model;
+
+import jakarta.persistence.*;
+
+@Entity
+public class Aluno {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String nomeAluno;
+    private String emailAluno;
+    private String telefoneAluno;
+
+    // Getters e Setters
+    public Long getId() { return id; }
+
+    public void setId(Long id) { this.id = id; }
+
+    public String getNomeAluno() { return nomeAluno; }
+
+    public void setNomeAluno(String nomeAluno) { this.nomeAluno = nomeAluno; }
+
+    public String getEmailAluno() { return emailAluno; }
+
+    public void setEmailAluno(String emailAluno) { this.emailAluno = emailAluno; }
+
+    public String getTelefoneAluno() { return telefoneAluno; }
+
+    public void setTelefoneAluno(String telefoneAluno) { this.telefoneAluno = telefoneAluno; }
+}
