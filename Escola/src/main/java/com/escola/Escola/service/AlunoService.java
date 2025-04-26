@@ -2,9 +2,12 @@ package com.escola.Escola.service;
 
 import com.escola.Escola.Interface.AlunoRepository;
 import com.escola.Escola.model.Aluno;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
-
+@Controller
+@RequestMapping("/alunos")
 public class AlunoService {
     private final AlunoRepository _repository;
 

@@ -2,16 +2,21 @@ package com.escola.Escola.controller;
 
 import com.escola.Escola.model.Aluno;
 import com.escola.Escola.service.AlunoService;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@Controller
+@RequestMapping("/alunos")
 public class AlunoController {
     private final AlunoService _alunoService;
 
     public AlunoController(AlunoService _alunoService) {
         this._alunoService = _alunoService;
     }
+
+
 
     @GetMapping
     public List<Aluno> listar() {
